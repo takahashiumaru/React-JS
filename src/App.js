@@ -18,7 +18,7 @@ const App = () => {
 
   const getUsers = async () => {
     try {
-      const response = await axios.get("https://express-js-eight.vercel.app/users");
+      const response = await axios.get("https://express-js-9-juli.vercel.app/users");
       const data = response.data.data; // Akses properti 'data' dari objek response
       console.log(data);
       if (Array.isArray(data)) {
@@ -36,7 +36,7 @@ const App = () => {
 
   const deleteUser = async (id) => {
     try {
-      await axios.delete(`https://express-js-eight.vercel.app/users/${id}`);
+      await axios.delete(`https://express-js-9-juli.vercel.app/users/${id}`);
       getUsers();
       // Tampilkan SweetAlert ketika pengguna berhasil menghapus data
       Swal('Berhasil!', 'Data berhasil dihapus', 'success');

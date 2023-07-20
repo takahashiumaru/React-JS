@@ -16,7 +16,7 @@ const CreateUser = () => {
         event.preventDefault();
 
         try {
-            const response = await axios.post("https://express-js-eight.vercel.app/users", {
+            const response = await axios.post("https://express-js-9-juli.vercel.app/users", {
                 name: name,
             });
 
