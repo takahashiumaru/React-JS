@@ -70,7 +70,7 @@ const deleteUser = async (id) => {
           <tbody>
             {users.map((user, index) => (
               <tr key={user.id}>
-                <td>{index + 1}</td>
+                <td>{user.id}</td>
                 <td>{user.name}</td>
                 <td>
                   <Link
