@@ -7,7 +7,6 @@ import { Link } from "react-router-dom";
 
 const CreateUser = () => {
     const [name, setName] = useState("");
-
     const handleNameChange = (event) => {
         setName(event.target.value);
     };
@@ -20,9 +19,13 @@ const CreateUser = () => {
                 name: name,
             });
 
-            if (response.data.success) {
-                Swal("Sukses!", "Data karyawan berhasil ditambahkan.", "success");
-                setName(""); // Reset input field after successful submission
+            if (response.status == '200') {
+                Swal("Sukses!", "Data karyawan berhasil ditambahkan.", "success").then(() => {
+                    window.location.href = '/';
+                });
+
+                setName("");
+
             } else {
                 Swal("Error", "Gagal menambahkan data karyawan.", "error");
             }
